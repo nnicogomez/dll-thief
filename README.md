@@ -37,9 +37,7 @@ Knowing that, i created dll-thief. dll-thief wants to be an automatization of th
 ## Installation
 1. Clone repo
 `git clone https://github.com/nnicogomez/dll-thief.git`
-2. Locate into the repo directory
-`cd dll-thief`
-3. Install requirements
+2. Install requirements
 `pip install -r requirements.txt`
 
 ## Usage
