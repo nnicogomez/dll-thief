@@ -58,7 +58,7 @@ Those programs are distributed in the hope that it will be useful, but WITHOUT A
 
 You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
 
-#References:
+# References:
 * https://stackoverflow.com/questions/518228/is-it-possible-to-add-a-directory-to-dll-search-path-from-a-batch-file-or-cmd-sc
 * https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order?redirectedfrom=MSDN#standard_search_order_for_desktop_applications
 * https://itm4n.github.io/windows-server-netman-dll-hijacking/
