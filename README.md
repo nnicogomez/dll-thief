@@ -1,4 +1,4 @@
-# dll-thief
+# gran-theft-dll
 
 ## Synopsys and objetive
 DLL hijacking is techique which allows to abuse the library search order to gain execution in a process. If the current user is able to write in the directories where the system search, it will be possible to put a malicious DLL in site. Why not? 
