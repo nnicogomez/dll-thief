@@ -35,12 +35,12 @@ Knowing that, i created dll-thief. dll-thief wants to be an automatization of th
 
 ## Installation
 1. Clone repo
-`git clone https://github.com/nnicogomez/dll-thief.git`
+`git clone https://github.com/nnicogomez/grand-theft-dll.git`
 2. Install requirements
 `pip install -r requirements.txt`
 
 ## Usage
-`.\dll-thief TARGET_PROCESS MALICIOUS_DLL`
+`.\gtdll.ps1 TARGET_PROCESS MALICIOUS_DLL`
 
 ## To do - In process
 * Module to put the DLL in the "vulnerable" path
