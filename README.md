@@ -43,9 +43,9 @@ Knowing that, i created dll-thief. dll-thief wants to be an automatization of th
 `.\dll-thief TARGET_PROCESS MALICIOUS_DLL`
 
 ## To do - In process
-.** Module to put the DLL in the "vulnerable" path
-.** Improve the process of user write access validation
-.** Database with know vulnerable $PATH entries
+* Module to put the DLL in the "vulnerable" path
+* Improve the process of user write access validation
+* Database with know vulnerable $PATH entries
 
 # Copyright
 dll-thief.ps1 - A linux tool to perform password spraying attacks.
