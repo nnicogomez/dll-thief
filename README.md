@@ -7,7 +7,7 @@ When the executable attempts to load the expected library, they will instead loa
 Normally, Windows treat to obtain the DLLs in the standard indicated location, but if the DLL is not found there, OS will find these in some known directories:
 
 ..* The directory from which the application loaded
-..* The system directory
+⋅⋅* The system directory
 ..* The 16-bit system directory.
 ..* The Windows directory.
 ..* The current directory.
