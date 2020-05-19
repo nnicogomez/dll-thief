@@ -24,12 +24,12 @@ if SafeDllSearchMode is enabled, the search order is as follows:
 * The directories that are listed in the PATH environment variable
 
 If SafeDllSearchMode is disabled, the search order is as follows:
-..* The directory from which the application loaded
-..* The current directory
-..* The system directory
-..* The 16-bit system directory
-..* The Windows directory
-..* The directories that are listed in the PATH environment variable
+* The directory from which the application loaded
+* The current directory
+* The system directory
+* The 16-bit system directory
+* The Windows directory
+* The directories that are listed in the PATH environment variable
 
 Knowing that, i created dll-thief. dll-thief wants to be an automatization of the DLL hijacking process. Using DLL hijacking we will be able to analyze the processes behaviour in a little time, learning what DLLs are used by what process and if these DLLs are found or not. When the script detects that a DLL was not found, it will treat to write a malicious DLL in the paths (mentioned above). 
 
