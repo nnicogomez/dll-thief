@@ -15,7 +15,7 @@ Commonly, Windows treat to obtain the DLLs in the standard indicated location, b
 The search order depends of `SafeDllSearchMode`.
 For more information about SafeDllSearchMode, see https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order
 
-if SafeDllSearchMode is enabled, the search order is as follows:
+if `SafeDllSearchMode` is enabled, the search order is as follows:
 * The directory from which the application loaded
 * The system directory
 * The 16-bit system directory
@@ -23,7 +23,7 @@ if SafeDllSearchMode is enabled, the search order is as follows:
 * The current directory
 * The directories that are listed in the PATH environment variable
 
-If SafeDllSearchMode is disabled, the search order is as follows:
+If `SafeDllSearchMode is` disabled, the search order is as follows:
 * The directory from which the application loaded
 * The current directory
 * The system directory
@@ -31,24 +31,42 @@ If SafeDllSearchMode is disabled, the search order is as follows:
 * The Windows directory
 * The directories that are listed in the PATH environment variable
 
-Knowing that, i created dll-thief. dll-thief wants to be an automatization of the DLL hijacking process. Using DLL hijacking we will be able to analyze the processes behaviour in a little time, learning what DLLs are used by what process and if these DLLs are found or not. When the script detects that a DLL was not found, it will treat to write a malicious DLL in the paths (mentioned above). 
+Knowing that, it was created `grand theft dll` (gtdll in advance). Application wants to be an automatization of the DLL hijacking process. Using gtdll for DLL hijacking attacks we will be able to analyze the processes behaviour in a little time, learning what DLLs are used by what process and if these DLLs are found or not. When the script detects that a DLL was not found, it will treat to write a malicious DLL in the paths (mentioned above). 
+
+## Main features
+* Search missing dlls in standard directory
+* Search missing dlls in windows search directories
+* Test user access to aforementioned directories
+* Write the malicious dll in "vulnerable" directories
 
 ## Installation
-1. Clone repo
+1. Clone repo:
 `git clone https://github.com/nnicogomez/grand-theft-dll.git`
-2. Install requirements
+2. Install requirements:
 `pip install -r requirements.txt`
 
-## Usage
-`.\gtdll.ps1 TARGET_PROCESS MALICIOUS_DLL`
+## Parameters
+`
+-process <process>: Mandatory parameter. Indicates the target process. This process should be active at the moment of execute the script. Don't include ".exe" extention.
+-autoexploitation: Switch parameter. If it is activated, script will try to perform the dll hijacking.
+-type <autoxplotation_mode>:
+  f: First path mode. The script will inject the dll file in the first possible path.
+  a: Annihilation mode. The script will inject the dll in all the paths.
+-dllp <dll_path>: Malicious dll path.
+-url <dll_url>: Download the dll from internet. 
+`
+## Help
+`Get-Help .\gtdll.ps1`
+
+## Typical usage
+`.\gtdll.ps1 -process explorer`
 
 ## To do - In process
-* Module to put the DLL in the "vulnerable" path
-* Improve the process of user write access validation
 * Database with know vulnerable $PATH entries
+* ...
 
 # Copyright
-dll-thief.ps1 - A linux tool to perform password spraying attacks.
+grand-theft.dll - A Windows tool to perform DLL hijacking attacks.
 
 Nicolás Gómez - Copyright © 2020
 
@@ -63,3 +81,6 @@ You should have received a copy of the GNU General Public License along with thi
 * https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order?redirectedfrom=MSDN#standard_search_order_for_desktop_applications
 * https://itm4n.github.io/windows-server-netman-dll-hijacking/
 * https://pentestlab.blog/2020/03/04/persistence-dll-hijacking/
+* https://ired.team/offensive-security/privilege-escalation/t1038-dll-hijacking
+* https://www.oreilly.com/library/view/windows-server-cookbook/0596006330/ch06s10.html
+* https://www.sysadmit.com/2019/07/windows-saber-dll-utiliza-programa.htm
