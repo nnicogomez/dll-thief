@@ -6,37 +6,40 @@ When the executable attempts to load the expected library, they will instead loa
 
 Normally, Windows treat to obtain the DLLs in the standard indicated location, but if the DLL is not found there, OS will find these in some known directories:
 
-..* The directory from which the application loaded
-⋅⋅* The system directory
-..* The 16-bit system directory.
-..* The Windows directory.
-..* The current directory.
-..* The directories that are listed in the PATH environment variable.
+* The directory from which the application loaded
+* The system directory
+* The 16-bit system directory
+* The Windows directory
+* The current directory
+* The directories that are listed in the PATH environment variable
 
 The search order depends of `SafeDllSearchMode`.
 For more information about SafeDllSearchMode, see https://docs.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order
 
 if SafeDllSearchMode is enabled, the search order is as follows:
-..* The directory from which the application loaded
-..* The system directory
-..* The 16-bit system directory.
-..* The Windows directory.
-..* The current directory.
-..* The directories that are listed in the PATH environment variable.
+* The directory from which the application loaded
+* The system directory
+* The 16-bit system directory
+* The Windows directory
+* The current directory
+* The directories that are listed in the PATH environment variable
 
 If SafeDllSearchMode is disabled, the search order is as follows:
-..* The directory from which the application loaded.
-..* The current directory.
-..* The system directory.
-..* The 16-bit system directory.
-..* The Windows directory.
-..* The directories that are listed in the PATH environment variable.
+..* The directory from which the application loaded
+..* The current directory
+..* The system directory
+..* The 16-bit system directory
+..* The Windows directory
+..* The directories that are listed in the PATH environment variable
 
 Knowing that, i created dll-thief. dll-thief wants to be an automatization of the DLL hijacking process. Using DLL hijacking we will be able to analyze the processes behaviour in a little time, learning what DLLs are used by what process and if these DLLs are found or not. When the script detects that a DLL was not found, it will treat to write a malicious DLL in the paths (mentioned above). 
 
 ## Installation
+1. Clone repo
 `git clone https://github.com/nnicogomez/dll-thief.git`
+2. Locate into the repo directory
 `cd dll-thief`
+3. Install requirements
 `pip install -r requirements.txt`
 
 ## Usage
