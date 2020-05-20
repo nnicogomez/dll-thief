@@ -47,19 +47,21 @@ Knowing that, it was created `grand theft dll` (gtdll in advance). Application w
 
 ## Parameters
 ```
--process <process>: Mandatory parameter. Indicates the target process. This process should be active at the moment of execute the script. Don't include ".exe" extention.  
+-process <process>: Mandatory parameter. Indicates the target process. This process should be active at the moment of execute the  script. Don't include ".exe" extention.  
 
 -autoexploitation: Switch parameter. If it is activated, script will try to perform the dll hijacking.  
 
 -type <autoxplotation_mode>:  
 
-  f: First path mode. The script will inject the dll file in the first possible path.  
+      f: First path mode. The script will inject the dll file in the first possible path.  
   
-  a: Annihilation mode. The script will inject the dll in all the paths.  
+      a: Annihilation mode. The script will inject the dll in all the paths.  
   
 -dllp <dll_path>: Malicious dll path.  
 
--url <dll_url>: Download the dll from internet. ```
+-url <dll_url>: Download the dll from internet. 
+```
+
 ## Help
 `Get-Help .\gtdll.ps1`
 
