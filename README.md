@@ -46,7 +46,8 @@ Knowing that, it was created `grand theft dll` (gtdll in advance). Application w
 `pip install -r requirements.txt`
 
 ## Parameters
-`-process <process>: Mandatory parameter. Indicates the target process. This process should be active at the moment of execute the script. Don't include ".exe" extention.  
+```
+-process <process>: Mandatory parameter. Indicates the target process. This process should be active at the moment of execute the script. Don't include ".exe" extention.  
 
 -autoexploitation: Switch parameter. If it is activated, script will try to perform the dll hijacking.  
 
@@ -58,7 +59,7 @@ Knowing that, it was created `grand theft dll` (gtdll in advance). Application w
   
 -dllp <dll_path>: Malicious dll path.  
 
--url <dll_url>: Download the dll from internet. `
+-url <dll_url>: Download the dll from internet. ```
 ## Help
 `Get-Help .\gtdll.ps1`
 
