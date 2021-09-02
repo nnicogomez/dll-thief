@@ -1,9 +1,9 @@
 # gran-theft-dll
 
 ## Synopsys and objetive
-DLL hijacking is techique which allows to abuse the library search order to gain execution in a process. If the current user is able to write in the directories where the system search, it will be possible to put a malicious DLL on site. When the executable attempts to load the expected library, they will instead load the malicious one. 
+DLL hijacking is a techique which allows to abuse the library search order to gain execution permissions in a particular process. If the current user is able to write in the directories where the system performs the libraries search, it would be possible to include a malicious DLL on site. When the OS attempt to load the expected library, it will load the malicious one. 
 
-Commonly, Windows treat to obtain the DLLs in the standard indicated location, but if the DLL is not found there, OS will find these in some known directories:
+Commonly, Windows try to get the DLLs in the standard process location, but if the DLL is not found there, the process manager will search these libraries in some known directories:
 
 * The directory from which the application loaded
 * The system directory
@@ -31,7 +31,7 @@ If `SafeDllSearchMode is` disabled, the search order is as follows:
 * The Windows directory
 * The directories that are listed in the PATH environment variable
 
-Knowing that, it was created `grand theft dll` (gtdll in advance). Application wants to be an automatization of the DLL hijacking process. Using gtdll for DLL hijacking attacks we will be able to analyze the processes behaviour in a little time, learning what DLLs are used by what process and if these DLLs are found or not. When the script detects that a DLL was not found, it will treat to write a malicious DLL in the paths (mentioned above). 
+Knowing that, I created `grand theft dll` (hereafter, gtdll). This application wants to automate the DLL hijacking process. Using gtdll for DLL hijacking attacks we will be able to analyze the processes behaviour in a little time, learning what DLLs are used by what process and if these DLLs are in place or not. When the tool detects that a DLL is not in place, it will try to write a malicious DLL in the paths (mentioned above). 
 
 ## Main features
 * Search missing dlls in standard directory
